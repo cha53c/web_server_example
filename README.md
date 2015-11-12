@@ -6,6 +6,8 @@ passenger is the web application server using a fully integrated verions of pass
 We will run a default rails app which you and either clone for blah.blah.blah or create yourself using the `rails new my_web_app`
 
 ## Getting Started
+You will need to make sure you have a Docker environment running on your machine, see, OSX, Windows and Linux
+
 The first step is to clone this repo to your local machine.
 
 `git clone git@github.com:cha53c/web_server_example.git`
