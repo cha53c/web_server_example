@@ -7,7 +7,8 @@ We will run a default rails app which you and either clone for blah.blah.blah or
 
 ## Getting Started
 The first step is to clone this repo to your local machine.
-`git clone blah.blah.blah`
+
+`git clone git@github.com:cha53c/web_server_example.git`
 
 This contains everything you need to build the container and run nginx, but is does not contain the RoR application. You will need to get this once you have cloned this repo. Once you have cloned the repo cd into it and clone blah.blah.blah web application the name of the repo will give you the correct directory
 
