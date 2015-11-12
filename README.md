@@ -16,3 +16,5 @@ Now you have everything to build the container.  The directory you are in, (whic
 
 `docker build cha53c/web_server_example.`
 
+## Notes on the Dockerfile
+
