@@ -11,8 +11,7 @@ This contains everything you need to build the container and run nginx, but is d
 Once you have cloned the repo
 CD into it and clone blah.blah.blah web application the name of the repo will give you the correct directory
 
-Now you have everything to build the container
-The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the .
+Now you have everything to build the container.  The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the '.'
 
 `docker build cha53c/web_server_example.`
 
