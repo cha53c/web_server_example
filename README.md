@@ -14,7 +14,15 @@ This contains everything you need to build the container and run nginx, but is d
 
 Now you have everything to build the container.  The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the '.'
 
-`docker build cha53c/web_server_example.`
+`docker build cha53c/web_server_example .`
+
+Have a look at you local images type `docker image` in you command line. You should see ...
+
+
+Now that this has built successfully you can run the container
+`docker run -d -p 80:80 cha53c/web_server_example`
+
+Check the image is running with `docker ps`. this will show you all the containers you have running. In this case it should just be one.
 
 ## Notes on the Dockerfile
 
