@@ -1,4 +1,4 @@
-# Create a Server for a RoR Web Application with Nginx and Passenger
+# Create a Server for a RoR Web Application with Nginx and Passenger using Docker
 
 ## Summary
 This is a simple example of how to create a web server for a RoR application using Docker. It uses nginx is used for web server
