@@ -6,8 +6,9 @@ passenger is the web application server using a fully integrated verions of pass
 We will run a default rails app which you and either clone for blah.blah.blah or create yourself using the `rails new my_web_app`
 
 ## Getting Started
-You will need to make sure you have a Docker environment running on your machine, see, OSX, Windows and Linux
+If you do not already have Docker install on your machine you will need to do so. For mac and windows see [Docker Toolbox](https://www.docker.com/docker-toolbox). For Linux find your flavour [here](http://docs.docker.com/v1.8/installation/)
 
+## Build Steps
 The first step is to clone this repo to your local machine.
 
 `git clone git@github.com:cha53c/web_server_example.git`
@@ -16,7 +17,7 @@ This contains everything you need to build the container and run nginx, but is d
 
 Now you have everything to build the container.  The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the '.'
 
-`docker build cha53c/web_server_example .`
+`docker build -t cha53c/web_server_example .`
 
 Have a look at you local images type `docker image` in you command line. You should see ...
 
@@ -27,4 +28,4 @@ Now that this has built successfully you can run the container
 Check the image is running with `docker ps`. this will show you all the containers you have running. In this case it should just be one.
 
 ## Notes on the Dockerfile
-
+## Note on nginx.conf
