@@ -17,15 +17,15 @@ COPY nginx.conf /opt/nginx/conf/
 
 # put the gemfiles in their on dir hierarchy to allow the cashed bundle install to be used
 WORKDIR /tmp
-COPY my_web_app/Gemfile Gemfile
-COPY my_web_app/Gemfile.lock Gemfile.lock
+COPY default_web_app/Gemfile Gemfile
+COPY default_web_app/Gemfile.lock Gemfile.lock
 RUN bundle install
 
 # copy the rails app from the context
-COPY my_web_app /var/www/my_web_app
+COPY default_web_app /var/www/default_web_app
 
 # Create the db file to use default config
-RUN touch /var/www/my_web_app/db/development.sqlite3
+RUN touch /var/www/default_web_app/db/development.sqlite3
 
 # set permissions needed for nginx
 RUN chmod -R 755 /var/www/
