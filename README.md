@@ -33,21 +33,13 @@ Build the container with the following command
 
 `docker build -t web_server_example .`
 
-Have a look at your local images type `docker image` in you command line. You should see your image in the list something like this.
-
-
-`REPOSITORY          TAG        IMAGE ID       CREATED          VIRTUAL SIZE
- web_server_example  latest   4fdadc688ca6   25 hours ago         585.2 MB`
+Have a look at your local images type `docker image` in you command line. 
 
 
 Now that this has built successfully you can run the container. The server will be listening on port 80
 `docker run -d -p 80:80 web_server_example`
 
-You can now check the image is running with `docker ps`. This will show you all the containers you have running. In this case it should just be one which should look something like this
-
-`CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                NAMES
-914b555fb0ab        cha53c/web_server_example   "/opt/nginx/sbin/ngin"   25 hours ago        Up 25 hours         0.0.0.0:80->80/tcp   sharp_brahmagupta`
-
+You can now check the image is running with `docker ps`
 
 ## Notes on the Dockerfile
 ## Note on nginx.conf
