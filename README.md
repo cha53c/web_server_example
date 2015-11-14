@@ -15,7 +15,12 @@ The first step is to clone this repo with the Dockerfile and context to your wor
 
 `git clone git@github.com:cha53c/web_server_example.git`
 
-This contains everything you need to build the container and run nginx, but is does not contain the RoR application. You will need to get this once you have cloned this repo. Once you have cloned the repo cd into it and clone blah.blah.blah web application the name of the repo will give you the correct directory
+This contains everything you need to build the container and run nginx, but is does not contain the RoR application.
+This needs to be created in the web_server_example directory.  You can either create this Rails or clone from Github
+ To create from with Rails
+`rails new default_web_app`
+To clone from repo
+`git clone git@github.com:cha53c/default_web_server`
 
 Now you have everything to build the container.  The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the '.'
 
