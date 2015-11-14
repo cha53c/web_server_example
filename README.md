@@ -10,6 +10,8 @@ The successfully running container will serve the default Rails 'Welcome aboard'
 ## Getting Started
 If you do not already have Docker installed on your machine you will need to do so. For mac and windows see [Docker Toolbox](https://www.docker.com/docker-toolbox). For Linux find your flavour [here](http://docs.docker.com/v1.8/installation/)
 
+You do not need to have Ruby or Rails installed on your work station
+
 ## Build Steps
 The first step is to clone this repo with the Dockerfile and context to your work station.
 
