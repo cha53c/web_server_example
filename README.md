@@ -1,15 +1,17 @@
 # Create a Server for a RoR Web Application with Nginx and Passenger using Docker
 
 ## Summary
-This is a simple example of how to create a web server for a RoR application using Docker. It uses nginx is used for web server
-passenger is the web application server using a fully integrated verions of passenger.  
-We will run a default rails app which you and either clone for blah.blah.blah or create yourself using the `rails new my_web_app`
+This is a simple example of how to create a web server for a RoR application using Docker. It uses nginx for web server
+passenger as the web application server using a fully integrated verions of passenger.  
+We will run a default rails app created using `rails new my_web_app`.
+
+The successfully running container will serve the default Rails 'Welcome aboard' page on port 80
 
 ## Getting Started
-If you do not already have Docker install on your machine you will need to do so. For mac and windows see [Docker Toolbox](https://www.docker.com/docker-toolbox). For Linux find your flavour [here](http://docs.docker.com/v1.8/installation/)
+If you do not already have Docker installed on your machine you will need to do so. For mac and windows see [Docker Toolbox](https://www.docker.com/docker-toolbox). For Linux find your flavour [here](http://docs.docker.com/v1.8/installation/)
 
 ## Build Steps
-The first step is to clone this repo to your local machine.
+The first step is to clone this repo with the Dockerfile and context to your work station.
 
 `git clone git@github.com:cha53c/web_server_example.git`
 
