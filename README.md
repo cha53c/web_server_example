@@ -36,8 +36,8 @@ Build the container with the following command
 Have a look at your local images type `docker image` in you command line. You should see your image in the list something like this.
 
 
-REPOSITORY          TAG       IMAGE ID     CREATED            VIRTUAL SIZE
-web_server_example  latest   4fdadc688ca6  25 hours ago     585.2 MB
+`REPOSITORY          TAG        IMAGE ID       CREATED          VIRTUAL SIZE
+ web_server_example  latest   4fdadc688ca6   25 hours ago         585.2 MB`
 
 
 Now that this has built successfully you can run the container. The server will be listening on port 80
