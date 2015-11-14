@@ -18,23 +18,35 @@ The first step is to clone this repo with the Dockerfile and context to your wor
 `git clone git@github.com:cha53c/web_server_example.git`
 
 This contains everything you need to build the container and run nginx, but is does not contain the RoR application.
-This needs to be created in the web_server_example directory.  You can either create this Rails or clone from Github
- To create from with Rails
+This needs to be created in the web_server_example directory.  You can either create this Rails or clone from Github.
+
+To create from with Rails
 `rails new default_web_app`
+
+
 To clone from repo
 `git clone git@github.com:cha53c/default_web_server`
 
-Now you have everything to build the container.  The directory you are in, (which should be web_server_example) will be the context for the build and referenced with the '.'
+Now you have everything to build the container.  The directory you are in (which should be web_server_example) will be the context for the build and is referenced with the '.'
 
-`docker build -t cha53c/web_server_example .`
+Build the container with the following command
 
-Have a look at you local images type `docker image` in you command line. You should see ...
+`docker build -t web_server_example .`
+
+Have a look at your local images type `docker image` in you command line. You should see your image in the list something like this.
+
+`REPOSITORY                  TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+web_server_example          latest              4fdadc688ca6        25 hours ago        585.2 MB`
 
 
-Now that this has built successfully you can run the container
-`docker run -d -p 80:80 cha53c/web_server_example`
+Now that this has built successfully you can run the container. The server will be listening on port 80
+`docker run -d -p 80:80 web_server_example`
 
-Check the image is running with `docker ps`. this will show you all the containers you have running. In this case it should just be one.
+You can now check the image is running with `docker ps`. This will show you all the containers you have running. In this case it should just be one which should look something like this
+
+`CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                NAMES
+914b555fb0ab        cha53c/web_server_example   "/opt/nginx/sbin/ngin"   25 hours ago        Up 25 hours         0.0.0.0:80->80/tcp   sharp_brahmagupta`
+
 
 ## Notes on the Dockerfile
 ## Note on nginx.conf
