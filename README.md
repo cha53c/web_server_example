@@ -46,15 +46,15 @@ Now you should be able to hit the web page with 'http://<your_docker_ip>'
 If your a running Docker on Mac or Windows the IP with the IP of the Docker host which is show when you start it up. 
 
 ## Notes on the Dockerfile
-Install apt package, node js is needed is need as the javascript engine
-Install bundler and Rails
-Install the passenger gem and use this to install Nginx. Note This specifies the Nginx root as /opt/nginx. Copy the config file from the context.
-Change to tmp dire and copy the Gemfile and Gemfile lock to a tmp directory tree. This is to enable the result of bundle install to be cached
-Run bundle install
-Copy in the web app
-Create the db. Note we are running in development mode.
-See the permission on the web app require for Nginx
-expose port 80
-State the command to run when the contain is started
++ Install apt package, node js is needed is need as the javascript engine
++ Install bundler and Rails
++ Install the passenger gem and use this to install Nginx. Note This specifies the Nginx root as /opt/nginx. Copy the config file from the context.
++ Change to tmp dire and copy the Gemfile and Gemfile lock to a tmp directory tree. This is to enable the result of bundle install to be cached
++ Run bundle install
++ Copy in the web app
++ Create the db. Note we are running in development mode.
++ Set the permission on the web app require for Nginx
++ expose port 80
++ State the command to run when the contain is started
 
 ## Note on nginx.conf
