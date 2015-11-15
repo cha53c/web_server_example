@@ -5,6 +5,9 @@ This is an simple example of a web server for a RoR application using [Docker](h
 
 The web application is the the default rails app created using `rails new`.  The successfully running container will serve the default Rails 'Welcome aboard' page on port 80
 
+This example is build on the [cloudgear/ruby:2.2](https://hub.docker.com/r/cloudgear/ruby) image. Which provides a mininal Ubuntu 14.04 with Ruby 2.2 installed
+
+
 ## Getting Started
 
 You will need Docker installed on your work station. For mac and windows see [Docker Toolbox](https://www.docker.com/docker-toolbox). For Linux find your flavour [here](http://docs.docker.com/v1.8/installation/)
@@ -43,6 +46,16 @@ You can now check the image is running with `docker ps`
 Now you should be able to hit the web page with 'http://<your_docker_ip>'
 If your a running Docker on Mac or Windows the IP with the IP of the Docker host which is show when you start it up. 
 
-
 ## Notes on the Dockerfile
+Install apt package, node js is needed is need as the javascript engine
+Install bundler and Rails
+Install the passenger gem and use this to install Nginx. Note This specifies the Nginx root as /opt/nginx. Copy the config file from the context.
+Change to tmp dire and copy the Gemfile and Gemfile lock to a tmp directory tree. This is to enable the result of bundle install to be cached
+Run bundle install
+Copy in the web app
+Create the db. Note we are running in development mode.
+See the permission on the web app require for Nginx
+expose port 80
+State the command to run when the contain is started
+
 ## Note on nginx.conf
