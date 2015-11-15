@@ -5,8 +5,7 @@ This is an simple example of a web server for a RoR application using [Docker](h
 
 The web application is the the default rails app created using `rails new`.  The successfully running container will serve the default Rails 'Welcome aboard' page on port 80
 
-This example is build on the [cloudgear/ruby:2.2](https://hub.docker.com/r/cloudgear/ruby) image. Which provides a mininal Ubuntu 14.04 with Ruby 2.2 installed
-
+This example is build on the [cloudgear/ruby:2.2](https://hub.docker.com/r/cloudgear/ruby) image which provides a mininal Ruby 2.2 installed on Ubuntu 14.04
 
 ## Getting Started
 
