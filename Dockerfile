@@ -3,7 +3,8 @@ FROM cloudgear/ruby:2.2
 MAINTAINER cha53c
 
 RUN apt-get update 
-RUN apt-get install -y curl nodejs
+RUN apt-get install -y curl nodejs && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* 
+
 
 RUN gem install bundler rails
 
