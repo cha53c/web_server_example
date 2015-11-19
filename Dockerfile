@@ -20,7 +20,7 @@ COPY nginx.conf /opt/nginx/conf/
 WORKDIR /tmp
 COPY default_web_app/Gemfile Gemfile
 COPY default_web_app/Gemfile.lock Gemfile.lock
-RUN bundle install
+RUN bundle install && rm -rf /tmp/*
 
 # copy the rails app from the context
 COPY default_web_app /var/www/default_web_app
@@ -30,9 +30,6 @@ RUN touch /var/www/default_web_app/db/development.sqlite3
 
 # set permissions needed for nginx
 RUN chmod -R 755 /var/www/
-
-# Clean up unwanted files from the install
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Expose the port nginx runs on
 EXPOSE 80
